@@ -1,0 +1,25 @@
+.logo {
+  height: 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.center-code {
+  display: flex;
+  padding-top: 10px;
+  padding-right: 30px;
+}
+
+
+/* .search {
+  width: 450px;
+} */
+
+.appbar {
+  background-color: rgb(29,29,91);
+}
+
+.drawer {
+  background-color: rgb(29,29,91);
+  
+}
