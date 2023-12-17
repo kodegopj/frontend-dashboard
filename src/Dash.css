@@ -1,13 +1,16 @@
 .paddingall {
     padding: 10px, 10px, 10px, 10px;
+    
 }
 
 .pricetitle {
     font-weight: 600;
+    color: #ECEFF1;
 }
 
 .pricesubtitle {
     font-size: 14px;
+    color: #ECEFF1;
 }
 
 .iconstyle {
@@ -20,7 +23,24 @@
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
+    background: rgb(33, 72, 211);
+  
+    background: linear-gradient(to right, rgb(27, 49, 158),   rgb(36, 70, 237)) ;
+    
+    
 }
+
+.card2 {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background: rgb(33, 72, 211);
+  
+    background: linear-gradient(to right, rgb(30, 84, 141),   rgb(36, 84, 141)) ;
+    
+    
+}
+
 
 .gradient {
     background: rgb(29,29,91);
@@ -29,7 +49,7 @@
 
 
 .gradientlight {
-    background: linear-gradient(to right, rgb(30, 84, 141), rgb(33, 72, 211));
+    background: linear-gradient(to right, rgb(30, 84, 141), rgb(33, 63, 211));
 }
 
 .bgcolor {
