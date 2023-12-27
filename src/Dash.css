@@ -57,3 +57,181 @@
     background: #ECEFF1;
     background: linear-gradient(158deg,rgb(224, 224, 224) 0% rrgb(233, 237, 254) 100%);
 }
+
+/* .register {
+    background-image: url(assets/background-dash.png);
+    height: 300px;
+    background-size: cover;
+} */
+
+
+.login {
+    background-image: url(assets/login-background.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+
+.input {
+    color:black;
+    width: 450px;
+}
+
+.login-logo {
+    background-image: url(assets/logo.jpg);
+    height: 100px;
+    border-radius: 100%;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+}
+
+.login-box {
+    display: flex;
+}
+
+
+.center-codes {
+    margin-top: 90px;
+    margin-left: 20px;
+}
+
+.welcome {
+    padding-left: 50px;
+    padding-top: 10px;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.border {
+    width: 500px;
+    border-radius: 2%;
+    border: 5px solid white;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.great {
+    margin-left: 20px;
+    margin-top: 30px;
+
+}   
+
+.welcome1 {
+    display: flex;
+}
+
+.have-account {
+    margin-left: 144px;
+    margin-right: 144px;
+}
+
+/* mobile login */
+
+@media (min-width: 315px) and (max-width: 427px) {
+    
+.login {
+    background-image: url(assets/login-background.jpg);
+    background-size: cover;
+    width: 425px;
+    min-height: 100vh;
+    color: white;
+    padding-left: 1px;
+ 
+}   
+
+.login-button {
+    width: 330px;
+    background-color: rgb(29,29,91);
+}
+
+.input {
+    color:black;
+    width: 330px;
+}
+
+.login-logo {
+    background-image: url(assets/logo.jpg);
+    height: 80px;
+    border-radius: 100%;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    margin-top: 80px;
+    margin-left: 50px;
+    
+}
+
+.login-box {
+    display: flex;
+}
+
+.center-codes {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.welcome {
+    padding-left: 50px;
+    padding-top: 10px;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+.border {
+    width: 380px;
+    border-radius: 2%;
+    border: 5px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.great {
+    margin-left: 20px;
+    margin-top: 25px;
+
+}   
+
+.welcome1 {
+    display: flex;
+}
+
+.have-account{
+    margin-left: 70px;
+    margin-right: 20px;
+    
+}
+}
+
+@media (min-width: 315px) and (max-width: 325px){
+    .login {
+        height: 850px;
+    }
+
+    .login-logo{
+        margin-top: 120px;
+    }
+
+    .center-codes{
+        margin-top: 150px;
+    }
+}
+
+@media (min-width: 365px) and (max-width: 385px){
+    .login {
+        height: 750px;
+    }
+}
+
+@media (min-width: 386px) and (max-width: 426px){
+    .login {
+        height: 850px;
+    }
+}
+

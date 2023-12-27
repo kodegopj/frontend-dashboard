@@ -1,4 +1,4 @@
-import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Sidenav from '../components/Sidenav';
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
@@ -11,18 +11,41 @@ import "../Dash.css";
 import StoreIcon from '@mui/icons-material/Store';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import AccordionDash from '../components/AccordionDash';
-import { BarChart } from '../charts/BarChart';
+import AccordionDash from '../components/AccordionDash.jsx';
+import BarChart from "../charts/BarChart.jsx"
+import { useEffect } from 'react';
 
 
-function Home() {
+
+
+function Home({ user, setUser}) {
+    
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!user) {
+            navigate("/login");
+        }
+    }, [user, navigate]);
+
+    const handleLogout = () => {
+        window.localStorage.removeItem("loggedDashUser");
+        setUser(null);
+    };
+ 
+
   return (
     <>
     <div className='bgcolor'>
         <Navbar/>
         <Box height={70}/>
         <Box sx={{ display: "flex"}}>
+           
             <Sidenav/>
+            <div>
+                <button onClick={handleLogout}>logout</button>
+            </div>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
@@ -68,7 +91,7 @@ function Home() {
                     <Grid item xs={4}>
                         <Stack spacing={2} >
                                 <Card sx={{ minWidth: 49 }} className='card'>
-                                        <Stack spacing={2}  direction="row">
+                                    <Stack spacing={2}  direction="row">
                                         <div className='iconstyle'>
                                             <StoreIcon/>
                                         </div>
@@ -77,7 +100,7 @@ function Home() {
                                             <br/>
                                             <span className='pricesubtitle'>Total Income</span>
                                         </div>
-                                        </Stack>
+                                    </Stack>
                                 </Card>
                                 <Card sx={{ minWidth: 45 }} className='card2'>
                                         <Stack spacing={2}  direction="row">
@@ -97,7 +120,7 @@ function Home() {
                 <Box height={20}/>
                 <Grid container spacing={2}>
                     <Grid item xs={8}>
-                    <Card sx={{ height: 60 +"vh" }}>
+                        <Card sx={{ height: 60 +"vh" }}>
                             <CardContent>
                               <BarChart/>
                             </CardContent>
@@ -109,6 +132,7 @@ function Home() {
                                 <div className='paddingall'>
                                     <span className='pricetitle'>Popular Products</span>
                                 </div>
+                                
                             <AccordionDash/>
                             </CardContent>
                         </Card>

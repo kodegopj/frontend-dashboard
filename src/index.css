@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .logo {
   height: 30px;
   border-radius: 30px;
@@ -17,6 +22,7 @@
 
 .appbar {
   background-color: rgb(29,29,91);
+  height: 30px;
 }
 
 .drawer {

@@ -185,7 +185,7 @@ export default function Navbar() {
           >
             <div className='center-code'>
               <div> <img src={logo} className='logo'/></div>
-              <div className='center'> <b>CENTER CODE</b> </div>
+              <div className='center'> <b>CE  NTER CODE</b> </div>
             </div>
           </Typography>
           <Search>

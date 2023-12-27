@@ -17,7 +17,7 @@ export const options = {
   colors: ["rgb(29,29,91)", "rgb(30, 84, 141)", "rgb(33, 72, 211)" ] 
 };
 
-export function BarChart() {
+export default function BarChart() {
   return (
     <Chart
       chartType="Bar"
