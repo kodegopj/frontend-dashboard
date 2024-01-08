@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import userService from "../services/userService";
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
+import noteService from "../services/noteService";
 
 
 function Login({ user, setUser }) {
@@ -25,9 +26,10 @@ function Login({ user, setUser }) {
       password
     }
 
-    userService.login(credentials).then((res) => {
+    userService.login(credentials).then((res) => {     
       window.localStorage.setItem("loggedDashboardUser", JSON.stringify(res));
       setUser(res);
+      noteService.setToken(res.token);
       navigate("/");
       setUsername("");
       setPassword("");

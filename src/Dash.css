@@ -1,12 +1,24 @@
 .paddingall {
     padding: 10px, 10px, 10px, 10px;
-    
+    margin-bottom: 20px;
 }
+
 
 .pricetitle {
     font-weight: 600;
     color: #ECEFF1;
 }
+
+.pricetitles {
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.popular {
+    background-color: beige;
+}
+
 
 .pricesubtitle {
     font-size: 14px;
@@ -235,3 +247,187 @@
     }
 }
 
+
+@media (min-width: 315px) and (max-width: 426px){
+    .main-container{
+        display: flex;
+    }
+    
+    .total-orders{
+        width: 410px;
+        margin: 5px;
+    }
+    
+    .total-income {
+        margin: 10px;
+    }
+
+    .card {
+        width: 410px;
+        margin: 5px;
+        
+    }
+
+    .dash-chart{
+        display: flex;
+        width: 410px;
+    }
+
+    .barchart{
+        width: 415px;
+        margin: 5px;
+    }
+
+    .containers {
+        background-color: rgb(249, 244, 244);
+    }
+
+    .popular-product {
+        width: 415px;
+        margin: 5px;
+        padding-top: 10px;
+    }
+
+}
+
+
+@media (min-width: 750px) and (max-width: 950px){
+    .main-container{
+        display: flex;
+    }
+    
+    .total-orders{
+        width: 310px;
+        margin: 10px;
+        margin-top: 10px;
+    }
+    
+    .total-income {
+        margin: 10px;
+       
+    }
+
+    .card {
+        width: 320px;
+        margin: 5px;
+        
+    }
+
+    .dash-chart{
+        display: flex;
+        width: 380px;
+    }
+
+    .barchart{
+        width: 320px;
+        margin: 10px;
+    }
+
+    .containers {
+        background-color: rgb(249, 244, 244);
+    }
+
+    .popular-product {
+        width: 320px;
+        margin: 5px;
+        margin-top: 10px;
+        margin-left: 5px;
+      
+    }
+    
+
+}
+
+@media (min-width: 951px) and (max-width: 1440px){
+    .main-container{
+        display: flex;
+    }
+    
+    .total-orders{
+        width: 440px;
+        margin: 10px;
+        margin-top: 10px;
+    }
+    
+    .total-income {
+        margin: 10px;
+       
+    }
+
+    .card {
+        width: 440px;
+        margin: 5px;
+        
+    }
+
+    .dash-chart{
+        display: flex;
+        width: 380px;
+    }
+
+    .barchart{
+        width: 440px;
+        margin: 10px;
+    }
+
+    .containers {
+        background-color: rgb(249, 244, 244);
+    }
+
+    .popular-product {
+        width: 440px;
+        margin: 5px;
+        margin-top: 10px;
+        margin-left: 5px;
+      
+    }
+    
+
+}
+
+@media (min-width: 1200px) and (max-width: 1550px){
+    .main-container{
+        display: flex;
+    }
+    
+    .total-orders{
+        width: 595px;
+        margin: 10px;
+        margin-top: 10px;
+    }
+    
+    .total-income {
+        margin: 10px;
+       
+    }
+
+    .card {
+        width: 595px;
+        margin: 5px;
+        
+    }
+
+    .dash-chart{
+        display: flex;
+        width: 380px;
+    }
+
+    .barchart{
+        width: 600px;
+        margin: 10px;
+    }
+
+    .containers {
+        background-color: rgb(249, 244, 244);
+    }
+
+    .popular-product {
+        width: 600px;
+        margin: 5px;
+        margin-top: 10px;
+        margin-left: 5px;
+      
+    }
+    
+
+}

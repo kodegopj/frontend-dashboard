@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 
 
 function Settings() {
+
+ 
   return (
     <>
     <Navbar/>
@@ -12,7 +14,7 @@ function Settings() {
     <Box sx={{ display: "flex"}}>
         <Sidenav/>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-            <h1>Settings</h1>
+            <h1 >Logout</h1>
         </Box>
     </Box>
     </>

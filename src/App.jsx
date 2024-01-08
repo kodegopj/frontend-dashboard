@@ -2,12 +2,13 @@ import "./App.css"
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Settings from './pages/Settings';
-import Analytics from './pages/Analytics';
 import Note from './pages/Note'
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { useState, useEffect } from "react";
-import Products from "./pages/Products";
+import noteService from "./services/noteService";
+import Invoice from "./pages/Invoice";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,9 +19,10 @@ function App() {
 
     if(loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON);
+      noteService.setToken(user.token); 
       setUser(user);
     }
-  }, [])
+  }, []);
  
   return (
     <>
@@ -30,9 +32,8 @@ function App() {
          <Route path="/register" element={<Register user={user} />} />
           <Route path="/login" element={<Login user={user} setUser={setUser} />} />
           <Route path="/note" exact element={<Note/>} />
-          <Route path="/products" exact element={<Products/>} />
+          <Route path="/invoice" exact element={<Invoice/>} />
           <Route path="/settings" exact element={<Settings/>} />
-          <Route path="/analytics" exact element={<Analytics/>} />
         </Routes> 
     
     </>

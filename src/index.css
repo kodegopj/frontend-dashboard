@@ -6,14 +6,107 @@
 .logo {
   height: 30px;
   border-radius: 30px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .center-code {
   display: flex;
   padding-top: 10px;
   padding-right: 30px;
+
 }
+
+.bg-note {
+  height: 670px;
+  width: 1450px;
+  position: absolute;
+
+}
+
+.note {
+  position: absolute;
+  width: 600px;
+}
+
+@media (min-width: 650px) and (max-width: 950px) {
+  
+  .note {
+    position: absolute;
+    width: 450px;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 452px) and (max-width: 649px) {
+  
+  .note {
+    position: absolute;
+    width: 450px;
+    margin-top: 20px;
+    margin-left: 0px;
+    
+  }
+  .bg-note {
+    height: 670px;
+    width: 500px;
+    position: absolute;
+    margin-right: 0px;
+    padding: 0px;
+  
+  }
+
+  .notes {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 315px) and (max-width: 451px) {
+  
+  .note {
+    position: absolute;
+    width: 330px;
+    margin-top: 20px;
+    margin-left: 0px;
+    
+  }
+  .bg-note {
+    height: 600px;
+    width: 550px;
+    position: absolute;
+    margin-right: 0px;
+    padding: 0px;
+  
+  }
+
+  .notes {
+    padding: 10px;
+  }
+}
+
+.client-data {
+  font-weight: bolder;
+  font-size: xx-large;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+
+
+/* @media (min-width: 315px) and (max-width: 325px){
+  .logo {
+    height: 30px;
+    border-radius: 30px;
+    margin-right: 20px;
+  }
+  
+  .center-code {
+    display: flex;
+    padding-top: 10px;
+    padding-right: 30px;
+  
+  }
+} */
+
 
 
 /* .search {

@@ -18,7 +18,7 @@ import { useEffect } from 'react';
 
 
 
-function Home({ user, setUser}) {
+function Home({ user }) {
     
 
     const navigate = useNavigate();
@@ -29,10 +29,10 @@ function Home({ user, setUser}) {
         }
     }, [user, navigate]);
 
-    const handleLogout = () => {
-        window.localStorage.removeItem("loggedDashUser");
-        setUser(null);
-    };
+    // const handleLogout = () => {
+    //     window.localStorage.removeItem("loggedDashUser");
+    //     setUser(null);
+    // };
  
 
   return (
@@ -40,15 +40,11 @@ function Home({ user, setUser}) {
     <div className='bgcolor'>
         <Navbar/>
         <Box height={70}/>
-        <Box sx={{ display: "flex"}}>
-           
+        <Box sx={{ display: "flex"}}>           
             <Sidenav/>
-            <div>
-                <button onClick={handleLogout}>logout</button>
-            </div>
-            <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={8}>
+            <Box component="main" sx={{ flexGrow: 1, p: 3 }} className='containers'>
+                <Grid container spacing={2} className='main-container'>
+                    <div item xs={8} className='total-orders'>
                         <Stack spacing={2} direction={"row"}>
                                 <Card sx={{ minWidth: 49 + "%", height: 150}} className='gradient'>
                                     <CardContent>
@@ -87,8 +83,8 @@ function Home({ user, setUser}) {
                                     </CardContent>
                                 </Card>
                         </Stack>
-                    </Grid>
-                    <Grid item xs={4}>
+                    </div>
+                    <div item xs={4} className='total-income'>
                         <Stack spacing={2} >
                                 <Card sx={{ minWidth: 49 }} className='card'>
                                     <Stack spacing={2}  direction="row">
@@ -115,28 +111,27 @@ function Home({ user, setUser}) {
                                         </Stack>
                                 </Card>
                         </Stack>
-                    </Grid>
+                    </div>
                 </Grid>
                 <Box height={20}/>
-                <Grid container spacing={2}>
-                    <Grid item xs={8}>
+                <Grid container spacing={2} className='dash-chart'>
+                    <div item xs={8} className='barchart'>
                         <Card sx={{ height: 60 +"vh" }}>
                             <CardContent>
                               <BarChart/>
                             </CardContent>
                         </Card>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <Card sx={{ height: 60 +"vh" }}>
-                            <CardContent>
+                    </div>
+                    <div item xs={4} className='popular-product'>
+                        <Card sx={{ height: 60 +"vh" }} className='accor'>
+                            <CardContent className='accor'>
                                 <div className='paddingall'>
-                                    <span className='pricetitle'>Popular Products</span>
-                                </div>
-                                
+                                    <span className='pricetitles'>Popular Products</span>
+                                </div>                                
                             <AccordionDash/>
                             </CardContent>
                         </Card>
-                    </Grid>
+                    </div>;
                 </Grid>
             </Box>
         </Box>

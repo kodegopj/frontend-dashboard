@@ -1,9 +1,27 @@
 import axios from "axios";
 
 const baseUrl = "http://localhost:3001/notes";
+let token = null;
+
+function setToken(newToken) {
+    token = `Bearer ${newToken}`;
+}
 
 async function getNotes() {
-    const res = await axios.get(baseUrl);
+    const config = {
+        headers: { Authorization: token },
+    };
+
+    const res = await axios.get(baseUrl, config);
+    return res.data;
+};
+
+async function createNote(newNote) {
+    const config = {
+        headers: { Authorization: token },
+    };
+
+    const  res = await axios.post(baseUrl, newNote, config);
     return res.data;
 }
 
@@ -26,7 +44,9 @@ async function updateNote(id, updatedNote) {
 
 
 export default {
+    setToken,
     getNotes,
+    createNote,
     addNote,
     deleteNote,
     updateNote,
