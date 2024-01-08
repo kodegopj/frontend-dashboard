@@ -15,7 +15,7 @@ function Register({ user }) {
 
   useEffect(() => {
     if (user) {
-      navigate("/");
+      navigate("/home");
     }
   }, [user, navigate])
 

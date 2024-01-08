@@ -14,7 +14,7 @@ function Login({ user, setUser }) {
 
   useEffect(() => {
     if (user) {
-      navigate("/");
+      navigate("/home");
     }
   }, [user, navigate]);
 
@@ -30,7 +30,7 @@ function Login({ user, setUser }) {
       window.localStorage.setItem("loggedDashboardUser", JSON.stringify(res));
       setUser(res);
       noteService.setToken(res.token);
-      navigate("/");
+      navigate("/home");
       setUsername("");
       setPassword("");
     });
