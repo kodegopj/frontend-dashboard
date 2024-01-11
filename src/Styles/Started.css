@@ -1,0 +1,172 @@
+@media (min-width: 315px) and (max-width: 320px) {
+    .ready-started {
+        height: 340px;
+        background-image: url(../assets/readytoget.jpg);
+        background-size: cover;
+        color: aliceblue;
+        padding: 70px 20px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+    
+    .h1-started {
+        font-size: 25px;
+        
+    }
+
+    .p-started {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .trial-button {
+        background-color:rgb(33, 72, 211);
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 400px) {
+    .ready-started {
+        height: 350px;
+        background-image: url(../assets/readytoget.jpg);
+        background-size: cover;
+        color: aliceblue;
+        padding: 70px 30px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+    
+    .h1-started {
+        font-size: 30px;
+        
+    }
+
+    .p-started {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .trial-button {
+        background-color:rgb(33, 72, 211);
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 426px) {
+    .ready-started {
+        height: 350px;
+        background-image: url(../assets/readytoget.jpg);
+        background-size: cover;
+        color: aliceblue;
+        padding: 70px 70px 70px 30px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+    
+    .h1-started {
+        font-size: 30px;
+        
+    }
+
+    .p-started {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .trial-button {
+        background-color:rgb(33, 72, 211);
+        padding: 10px 30px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1000px) {
+    .ready-started {
+        height: 510px;
+        background-image: url(../assets/readytoget.jpg);
+        background-size: cover;
+        color: aliceblue;
+        padding: 100px 335px 70px 60px;
+        margin: 70px 50px 0px 50px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    
+    .h1-started {
+        font-size: 45px;
+        
+    }
+
+    .p-started {
+        margin-top: 20px;
+        margin-bottom: 90px;
+    }
+
+    .trial-button {
+        background-color:rgb(33, 72, 211);
+        padding: 10px 35px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1350px) {
+    .ready-started {
+        height: 470px;
+        background-image: url(../assets/readytoget.jpg);
+        background-size: cover;
+        color: aliceblue;
+        padding: 100px 335px 70px 60px;
+        margin: 70px 80px 0px 80px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    
+    .h1-started {
+        font-size: 45px;
+        
+    }
+
+    .p-started {
+        margin-top: 20px;
+        margin-bottom: 90px;
+    }
+
+    .trial-button {
+        background-color:rgb(33, 72, 211);
+        padding: 10px 35px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 1360px) and (max-width: 1550px) {
+    .ready-started {
+        height: 500px;
+        background-image: url(../assets/readytoget.jpg);
+        background-size: 99%;
+        color: aliceblue;
+        padding: 100px 335px 70px 60px;
+        margin: 150px 120px 0px 120px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    
+    .h1-started {
+        font-size: 47px;
+        
+    }
+
+    .p-started {
+        margin-top: 20px;
+        margin-bottom: 90px;
+    }
+
+    .trial-button {
+        background-color:rgb(33, 72, 211);
+        padding: 10px 35px;
+        border-radius: 25px;
+    }
+}
+
+

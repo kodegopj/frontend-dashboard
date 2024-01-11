@@ -16,30 +16,30 @@ function DataCollection() {
         <div className={'container2 '}>
             <div className={'px-16 py-4 flex flex-col items-center'}>
                 Data Management
-                <FaDatabase  className='size-14'/>
+                <FaDatabase  className='size-14 collection'/>
             </div>
             <div className={'px-16 py-4 flex flex-col items-center'}>
                 Data Analytics
-                <FaMagnifyingGlassChart  className='size-14'/>
+                <FaMagnifyingGlassChart  className='size-14 collection'/>
             </div>
             <div className={'px-16 py-4 flex flex-col items-center'}>
                 Data Visualization
-                < BsGraphUpArrow  className='size-14'/>
+                < BsGraphUpArrow  className='size-14 collection'/>
             </div>
             <div className={'px-20 py-4 flex flex-col items-center'}>
                 Data Client
-                < MdOutlinePeopleAlt  className='size-14'/>
+                < MdOutlinePeopleAlt  className='size-14 collection'/>
             </div>  
             
             <div className={'container3'}>
                 <button className={'enroll con2'}> 
                      <Link to="/register">
-                      Register
+                      <b>Register</b>
                     </Link>
                 </button>
                 <button className={'log con2'}>
                     <Link to="/login">
-                      Login
+                      <b>Login</b>
                     </Link>
                 </button>
             </div>
