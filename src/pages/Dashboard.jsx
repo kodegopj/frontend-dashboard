@@ -2,10 +2,22 @@ import React from 'react';
 import Nav from '../components/Nav';
 import "../Styles/Main.css"
 import DataCollection from '../components/DataCollection';
+import Footer from '../components/Footer';
+import '../Styles/AppSuited.css';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardContent from '@mui/material/CardContent';
+import { FaArrowRight } from "react-icons/fa";
+import Grid from '@mui/material/Grid';
+import { IoMdCheckboxOutline } from "react-icons/io";
+import AppSuited from '../components/AppSuited';
+import SalesPricing from '../components/SalesPricing';
+import ReadyToGetStarted from '../components/ReadyToGetStarted';
+
 
 function Dashboard() {
   return (
-    <div>
+    <Box >
         <Nav/>
         <div className='dash-land-container'>
           <div className='dash-land'>
@@ -14,9 +26,13 @@ function Dashboard() {
           </div>
         </div>
         <DataCollection/>
-    </div>
+        <SalesPricing/>
+        <AppSuited/>
+        <ReadyToGetStarted/>
+      <Footer/>
+    </Box>
 
   )
 }
 
-export default Dashboard
+export default Dashboard;

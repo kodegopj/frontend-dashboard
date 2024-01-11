@@ -1,0 +1,145 @@
+.footer-logo {
+    background-image: url(../assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-bottom: 30px;
+    border: solid;
+}
+
+footer{
+    width: 100%; 
+    bottom: 0;
+    background: linear-gradient(to right, #f0f1f4, rgb(247, 247, 247));
+    color: #000;
+    padding: 50px 0 30px;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.centercode-name {
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    color: rgb(33, 72, 211);
+}
+
+.rows{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cols{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.cols:nth-child(2), .cols:nth-child(3){
+    flex-basis: 20%;
+}
+
+
+.cols h3{
+    width: fit-content;
+    font-size: 15px;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.for{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.for .fa-solid{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.for input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+.for button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.for button .fa-sharp{
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+hr{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ccc; 
+}
+
+.copyrights{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.officenews {
+    border-bottom: 5px solid gray;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    
+}
+
+.envelope {
+    color: white;
+}
+
+
+@media (max-width: 700px){
+    .cols{
+        flex-basis: 100%;
+        padding: 10px;
+    }
+    
+    .cols:nth-child(2), .cols:nth-child(3){
+        flex-basis: 100%;
+    }
+}   
