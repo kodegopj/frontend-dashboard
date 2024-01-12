@@ -16,6 +16,7 @@ export const options = {
 };
 
 export default function App() {
+
   return (
     <Chart
       chartType="LineChart"

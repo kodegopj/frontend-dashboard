@@ -28,16 +28,16 @@ function App() {
   return (
     <>
      
-        <Routes>
-         <Route path="/home" element={<Home user={user} setuser={setUser} />} />
-         <Route path="/register" element={<Register user={user} />} />
-          <Route path="/login" element={<Login user={user} setUser={setUser} />} />
-          <Route path="/" exact element={<Dashboard/>} />
-          <Route path="/note" exact element={<Note/>} />
-          <Route path="/invoice" exact element={<Invoice/>} />
-          <Route path="/settings" exact element={<Settings/>} />
+    <Routes>
+      <Route path="/home" element={<Home user={user} setuser={setUser} />} />         
+      <Route path="/register" element={<Register user={user} />} />
+      <Route path="/login" element={<Login user={user} setUser={setUser} />} />
+      <Route path="/" exact element={<Dashboard/>} />
+      <Route path="/note" exact element={<Note/>} />
+      <Route path="/invoice" exact element={<Invoice/>} />
+      <Route path="/settings" exact element={<Settings/>} />
 
-        </Routes> 
+    </Routes> 
     
     </>
   )
