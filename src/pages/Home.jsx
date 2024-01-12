@@ -12,8 +12,12 @@ import StoreIcon from '@mui/icons-material/Store';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import AccordionDash from '../components/AccordionDash.jsx';
-import BarChart from "../charts/BarChart.jsx"
+import BarChart from "../charts/BarChart.jsx";
+import TestChart from "../charts/TestChart.jsx"
 import { useEffect } from 'react';
+import productService from '../services/productService.js';
+import { useState } from 'react';
+
 
 
 
@@ -33,7 +37,27 @@ function Home({ user }) {
     //     window.localStorage.removeItem("loggedDashUser");
     //     setUser(null);
     // };
- 
+
+    const [numOfPurchase, setnumOfPurchase] = useState([]);
+    const [revenue, setRevenue] = useState([]);
+    const [profit, setProfit] = useState([]);
+    const [expenses, setExpenses] = useState([]);
+  
+    useEffect(() => {
+      productService.productPurchase().then((res) => setnumOfPurchase(res))
+    }, []);
+
+    useEffect(() => {
+        productService.getRevenue().then((res) => setRevenue(res))
+      }, []);
+
+    useEffect(() => {
+    productService.getProfit().then((res) => setProfit(res))
+    }, []);
+
+    useEffect(() => {
+        productService.getExpenses().then((res) => setExpenses(res))
+        }, []);
 
   return (
     <>
@@ -53,7 +77,7 @@ function Home({ user }) {
                                         
                                         </div>
                                         <Typography gutterBottom variant="h5" component="div" sx={{color: '#ffffff'}}>
-                                        89,689
+                                        {numOfPurchase}
                                         </Typography>
                                         <Typography 
                                             gutterBottom variant="body2" 
@@ -71,14 +95,14 @@ function Home({ user }) {
                                             <CreditCardIcon/>
                                         </div>
                                         <Typography gutterBottom variant="h5" component="div" sx={{color: '#ffffff'}}>
-                                            $337,346.00
+                                        ₱ {revenue}
                                         </Typography>
                                         <Typography 
                                             gutterBottom variant="body2" 
                                             component="div" 
                                             sx={{color: "#ccd1d1"}}
                                         >
-                                            Total Earnings
+                                            Revenue
                                         </Typography>
                                     </CardContent>
                                 </Card>
@@ -92,9 +116,9 @@ function Home({ user }) {
                                             <StoreIcon/>
                                         </div>
                                         <div className='paddingall'>
-                                            <span className='pricetitle'>$337,346.00</span>
+                                            <span className='pricetitle'>₱{profit}</span>
                                             <br/>
-                                            <span className='pricesubtitle'>Total Income</span>
+                                            <span className='pricesubtitle'>Profit</span>
                                         </div>
                                     </Stack>
                                 </Card>
@@ -104,7 +128,7 @@ function Home({ user }) {
                                             <StoreIcon/>
                                         </div>
                                         <div className='paddingall'>
-                                            <span className='pricetitle'>$175,825.00</span>
+                                            <span className='pricetitle'>₱{expenses}</span>
                                             <br/>
                                             <span className='pricesubtitle'>Total Expenses</span>
                                         </div>
@@ -118,7 +142,8 @@ function Home({ user }) {
                     <div item xs={8} className='barchart'>
                         <Card sx={{ height: 60 +"vh" }}>
                             <CardContent>
-                              <BarChart/>
+                              {/* <BarChart/> */}
+                              <TestChart />
                             </CardContent>
                         </Card>
                     </div>
