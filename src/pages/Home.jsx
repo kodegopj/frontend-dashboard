@@ -13,7 +13,7 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import AccordionDash from '../components/AccordionDash.jsx';
 import BarChart from "../charts/BarChart.jsx";
-import TestChart from "../charts/TestChart.jsx"
+// import TestChart from "../charts/TestChart.jsx"
 import { useEffect } from 'react';
 import productService from '../services/productService.js';
 import { useState } from 'react';
@@ -142,8 +142,8 @@ function Home({ user }) {
                     <div item xs={8} className='barchart'>
                         <Card sx={{ height: 60 +"vh" }}>
                             <CardContent>
-                              {/* <BarChart/> */}
-                              <TestChart />
+                              <BarChart/>
+                              {/* <TestChart /> */}
                             </CardContent>
                         </Card>
                     </div>
