@@ -5,21 +5,26 @@ import Navbar from '../components/Navbar';
 import DataTable from 'react-data-table-component';
 
 
-function Invoice() {
+function Products() {
     const columns = [
         {
-            name: 'Name',
+            name: 'Product Name',
             selector: row => row.name,
             sortable: true          
         },
         {
-            name: "Email",
-            selector: row => row.email,
+            name: "Quantity",
+            selector: row => row.quantity,
             sortable: true    
         },
         {
-            name: "Age",
-            selector: row => row.age,
+            name: "Selling Pricet",
+            selector: row => row.price,
+            sortable: true    
+        },
+        {
+            name: "Total Cost",
+            selector: row => row.cost,
             sortable: true    
         },
       
@@ -27,76 +32,47 @@ function Invoice() {
     const data = [
         {
             id:1,
-            name: "abel",
-            email:"abel@gmail.com",
-            age: "32",
+            name: "Buko Juice",
+            quantity: "4",
+            price: "10",
+            cost: "40",
         },
         {
             id:2,
-            name: "kelly",
-            email:"kelly@gmail.com",
-            age: "26",
+            name: "Japanese Siomai",
+            quantity: "10",
+            price: "36",
+            cost: "360",
         },
         {
             id:3,
-            name: "loki",
-            email:"loki@gmail.com",
-            age: "38",
+            name: "Sharksfin",
+            quantity: "12",
+            price: "38",
+            cost: "456",
         },
         {
             id:4,
-            name: "charlie",
-            email:"charlie@gmail.com",
-            age: "29",
+            name: "Black GUlaman",
+            quantity: "4",
+            price: "10",
+            cost: "40",
         },
         {
             id:5,
-            name: "romeo",
-            email:"romeo@gmail.com",
-            age: "36",
+            name: "Pork Siomai",
+            quantity: "7",
+            price: "28",
+            cost: "196",
         },
         {
             id:6,
-            name: "hanz",
-            email:"hanz@gmail.com",
-            age: "24",
+            name: "Chicken Siomai",
+            quantity: "18",
+            price: "30",
+            cost: "540",
         },
-        {
-            id:7,
-            name: "harvey",
-            email:"harvey@gmail.com",
-            age: "23",
-        },
-        {
-            id:8,
-            name: "kenlee",
-            email:"kenlee@gmail.com",
-            age: "25",
-        },
-        {
-            id:9,
-            name: "christian",
-            email:"christian@gmail.com",
-            age: "32",
-        },
-        {
-            id:10,
-            name: "kathleen",
-            email:"kathleen@gmail.com",
-            age: "18",
-        },
-        {
-            id:11,
-            name: "chloe",
-            email:"chloe@gmail.com",
-            age: "22",
-        },
-        {
-            id:12,
-            name: "jenilyn",
-            email:"jenilyn@gmail.com",
-            age: "36",
-        },
+        
     ]
 
     const [records, setRecords] = useState(data);
@@ -116,7 +92,7 @@ function Invoice() {
         <Sidenav/>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
             <div className=' mt-5' >
-                <h1 className='client-data'> <b>Client Data</b> </h1>
+                <h1 className='client-data'> <b>Products</b> </h1>
                 <div className='text-end'>
                     <input 
                         type='text'
@@ -140,4 +116,4 @@ function Invoice() {
   )
 };
 
-export default Invoice;
+export default Products;
