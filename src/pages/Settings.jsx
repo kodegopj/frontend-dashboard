@@ -4,8 +4,15 @@ import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
 
 
-function Settings() {
+function Settings({ setUser }) {
 
+
+  const handleLogout = () => {
+    window.localStorage.removeItem("loggedDashUser");
+    setUser(null);  
+
+    console.log(handleLogout)
+  };
  
   return (
     <>
@@ -14,7 +21,7 @@ function Settings() {
     <Box sx={{ display: "flex"}}>
         <Sidenav/>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-            <h1 >Logout</h1>
+            <button onClick={ handleLogout  }>Logout</button>
         </Box>
     </Box>
     </>

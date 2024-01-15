@@ -3,7 +3,7 @@ import productService from '../services/productService.js';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-export default function App() {
+export default function TestChart() {
 
     const [product, setProduct] = useState([]);
   
