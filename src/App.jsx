@@ -6,8 +6,8 @@ import Note from './pages/Note'
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { useState, useEffect } from "react";
-import noteService from "./services/noteService";
-import Invoice from "./pages/Invoice";
+import noteService from "./services/noteService.js";
+import Products from "./pages/Products";
 import Dashboard from "./pages/Dashboard";
 
 
@@ -15,7 +15,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const loggedUserJSON = window.localStorage.getItem("loggedDashUser");
+    const loggedUserJSON = window.localStorage.getItem("loggedDashboard");
 
 
     if(loggedUserJSON) {
@@ -34,7 +34,7 @@ function App() {
       <Route path="/login" element={<Login user={user} setUser={setUser} />} />
       <Route path="/" exact element={<Dashboard/>} />
       <Route path="/note" exact element={<Note/>} />
-      <Route path="/invoice" exact element={<Invoice/>} />
+      <Route path="/products" exact element={<Products/>} />
       <Route path="/settings" exact element={<Settings/>} />
 
     </Routes> 

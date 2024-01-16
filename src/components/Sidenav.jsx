@@ -141,7 +141,7 @@ export default function Sidenav() {
                 <ListItemText primary="Note" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/invoice")}}>
+            <ListItem disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/products")}}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -158,7 +158,7 @@ export default function Sidenav() {
                 >
                 <ReceiptIcon/>
                 </ListItemIcon>
-                <ListItemText primary="Invoice" sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText primary="Products" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding sx={{ display: 'block' }}  >
