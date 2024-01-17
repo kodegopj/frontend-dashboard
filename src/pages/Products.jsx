@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import Sidenav from '../components/Sidenav';
+
+import React, { useState } from 'react'
+import Sidenav from '../components/Sidenav'
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
-import DataTable from 'react-data-table-component';
-import productService from '../services/productService';
+import ProductList from './products/ProductList';
 
 
 function Products() {
@@ -108,25 +107,8 @@ function Products() {
     <Box sx={{ display: "flex"}}>
         <Sidenav/>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-            <div className=' mt-5' >
-                <h1 className='client-data'> <b>Products</b> </h1>
-                <div className='text-end'>
-                    <input 
-                        type='text'
-                        onChange={handleFilter}
-                        className=' border-solid border-2 border-slate-500 p-2 w-96 mx-2' />
-                </div>
-                <DataTable
-                    columns={columns}
-                    data= {products}
-                    selectableRows
-                    fixedHeader
-                    pagination
-                    className='py-2'
-                >
-               
-                </DataTable>
-            </div>
+            <ProductList/>
+
         </Box>
     </Box>
     </>

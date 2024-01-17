@@ -6,7 +6,7 @@ import Note from './pages/Note'
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { useState, useEffect } from "react";
-import noteService from "./services/noteService";
+import noteService from "./services/noteService.js";
 import Products from "./pages/Products";
 import Dashboard from "./pages/Dashboard";
 
