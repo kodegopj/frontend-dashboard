@@ -57,6 +57,16 @@ async function getExpenses() {
     return res.data;
 };
 
+async function createProduct() {
+    const config = {
+        headers: { Authorization: token },
+    };
+
+    const res = await axios.post(baseUrl, config);
+
+    return res.data;
+};
+
 
 
 
@@ -67,4 +77,5 @@ export default {
     getRevenue,
     getProfit,
     getExpenses,
+    createProduct,
 };

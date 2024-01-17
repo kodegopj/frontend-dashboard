@@ -83,22 +83,22 @@ function Products() {
         
     // ];
 
-    const [products, SetProducts] = useState([]);
+    // const [products, SetProducts] = useState([]);
   
-    useEffect(() => {
-      productService.getProducts().then((res) => SetProducts(res))
-    }, []);
+    // useEffect(() => {
+    //   productService.getProducts().then((res) => SetProducts(res))
+    // }, []);
 
-    console.log(products);
+    // console.log(products);
 
-    const [records, setRecords] = useState(products);
+    // const [records, setRecords] = useState(products);
 
-    function handleFilter(event) {
-        const newData = products.filter(row => {
-            return row.title.toLowerCase().includes(event.target.value.toLowerCase());
-        })
-        setRecords(newData);
-    };
+    // function handleFilter(event) {
+    //     const newData = products.filter(row => {
+    //         return row.title.toLowerCase().includes(event.target.value.toLowerCase());
+    //     })
+    //     setRecords(newData);
+    // };
 
   return (
     <>

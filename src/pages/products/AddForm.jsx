@@ -15,24 +15,27 @@ function AddForm({closeEvent}) {
   const [quantity, setQuantity] = useState("");
   const [price, setPrice] = useState(0);
   const [cost, setCost] = useState(0);
+  const [product, setProduct] = useState([]);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
 
   const handleQuantityChange = (event) => {
-    setName(event.target.value);
+    setQuantity(event.target.value);
   };
 
   const handlePriceChange = (event) => {
-    setName(event.target.value);
+    setPrice(event.target.value);
   };
 
   const handleCostChange = (event) => {
-    setName(event.target.value);
+    setCost(event.target.value);
   };
 
-  const createUser = () => {};
+  const createUser = (event) => {
+    setProduct(event.target.value);
+  };
 
   return (
     <>

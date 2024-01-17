@@ -19,6 +19,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import TextField from '@mui/material/TextField';
 import Modal from '@mui/material/Modal';
 import AddForm from './AddForm';
+import productService from '../../services/productService';
 
 const rows = [
   
@@ -42,6 +43,11 @@ export default function ProductList() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [products, setProducts] = useState([]);
+  
+  useEffect(() => {
+    productService.getProducts().then((res) => setProducts(res))
+  }, []);
 
 
   const handleChangePage = (event, newPage) => {
@@ -55,9 +61,9 @@ export default function ProductList() {
 
   const filterData = (v) => {
     if (v) {
-        setRows([v]);
+      setProducts([v]);
     }   else {
-            setRows([]);
+      setProducts([]);
         getUsers();
     }
   };
@@ -93,10 +99,10 @@ export default function ProductList() {
                 <Autocomplete
                     disablePortal
                     id="combo-box-demo"
-                    options={rows}
+                    options={products}
                     sx={{ width:300 }}
                     onChange={(e, v) => filterData(v)}
-                    getOptionLabel={(rows) => rows.price || ""}
+                    getOptionLabel={(products) => products.price || ""}
                     renderInput={(params) => (
                         <TextField {...params} size="small" label="Search Products" />
                     )}
@@ -139,29 +145,37 @@ export default function ProductList() {
                 <TableCell
                   align="left"
                   style={{ minWidth: "100px" }}>
+                  Number of Sales
+                </TableCell>
+                <TableCell
+                  align="left"
+                  style={{ minWidth: "100px" }}>
                   Action
                 </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows
+            {products
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => {
+              .map((products) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} >
-                        <TableCell key={row.id} align="left">
-                            {row.productName}
+                        <TableCell key={products.id} align="left">
+                            {products.title}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                            {row.quantity}
+                        <TableCell key={products.id} align="left">
+                            {products.qty}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                            {row.sellingPrice}
+                        <TableCell key={products.id} align="left">
+                            {products.price}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
-                            {row.totalCost}
+                        <TableCell key={products.id} align="left">
+                            {products.cost}
                         </TableCell>
-                        <TableCell key={row.id} align="left">
+                        <TableCell key={products.id} align="left">
+                            {products.purchasedQuantity}
+                        </TableCell>
+                        <TableCell key={products.id} align="left">
                             <Stack spacing={2} direction="row">
                                 <EditIcon
                                     style={{
@@ -193,7 +207,7 @@ export default function ProductList() {
       <TablePagination
         rowsPerPageOptions={[5, 10, 100]}
         component="div"
-        count={rows.length}
+        count={products.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
