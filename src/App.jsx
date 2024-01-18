@@ -15,7 +15,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const loggedUserJSON = window.localStorage.getItem("loggedDashboardUser");
+    const loggedUserJSON = window.localStorage.getItem("loggedDashboard");
 
 
     if(loggedUserJSON) {
