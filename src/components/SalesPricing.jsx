@@ -24,7 +24,7 @@ function SalesPricing() {
         <div className='main-sales'>
           <div className='product-list'></div>
           <div className='sales-p'>
-          Get a quick look at the projections for you key metrics such as Revenue and Net Profit. See the forecasted trend on the chart, and go into the full report for more detail. We think this is one of the coolest widgets on your ecommerce dashboard.
+          Get a quick look at your products and track the number of sales, selling price, qunatity and the total cost. 
           </div>
         </div>
       </div>
