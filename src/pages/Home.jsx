@@ -17,6 +17,7 @@ import BarChart from "../charts/BarChart.jsx";
 import { useEffect } from 'react';
 import productService from '../services/productService.js';
 import { useState } from 'react';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 function Home({ user }) {
@@ -30,7 +31,7 @@ function Home({ user }) {
     }, [user, navigate]);
 
     // const handleLogout = () => {
-    //     window.localStorage.removeItem("loggedDashUser");
+    //     window.localStorage.removeItem("loggedDashboardUser");
     //     setUser(null);
     // };
 
@@ -57,9 +58,19 @@ function Home({ user }) {
 
   return (
     <>
-    <div className='bgcolor'>
+    <div className=''>
+           
         <Navbar/>
-        <Box height={70}/>
+        {/* <Box height={0}/>
+            <div className='logout'>
+                <button
+                    onClick={handleLogout}
+                    className='bg-red-500 p-2 text-white font-bold logout-icon'
+                >
+                   <LogoutIcon /> Logout
+                </button>
+            </div> */}
+         <Box height={70}/>
         <Box sx={{ display: "flex"}}>           
             <Sidenav/>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }} className='containers'>
