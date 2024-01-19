@@ -77,8 +77,21 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function Sidenav() {
   const theme = useTheme();
   // const [open, setOpen] = React.useState(true);
-  const navigate = useNavigate(); 
+  
   const open = useAppStore((state) => state.dopen);
+
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //     if (!user) {
+  //         navigate("/login");
+  //     }
+  // }, [user, navigate]);
+
+  // const handleLogout = () => {
+  //   window.localStorage.removeItem("loggedDashboardUser");
+  //   setUser(null);
+  // };
 
   
  
@@ -161,7 +174,7 @@ export default function Sidenav() {
                 <ListItemText primary="Products" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding sx={{ display: 'block' }}  >
+            <ListItem disablePadding sx={{ display: 'block' }}   >
               <ListItemButton
                 sx={{
                   minHeight: 48,

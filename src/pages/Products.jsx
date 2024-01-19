@@ -4,9 +4,14 @@ import Sidenav from '../components/Sidenav'
 import Box from '@mui/material/Box';
 import Navbar from '../components/Navbar';
 import ProductList from './products/ProductList';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 function Products() {
+    // const handleLogout = () => {
+    //     window.localStorage.removeItem("loggedDashboardUser");
+    //     setUser(null);
+    // };
 
     const columns = [
         {
@@ -103,6 +108,15 @@ function Products() {
   return (
     <>
     <Navbar/>
+    {/* <Box height={0}/>
+            <div className='logout'>
+                <button
+                    onClick={handleLogout}
+                    className='bg-red-500 p-2 text-white font-bold logout-icon'
+                >
+                   <LogoutIcon /> Logout
+                </button>
+            </div> */}
     <Box height={70}/>
     <Box sx={{ display: "flex"}}>
         <Sidenav/>
